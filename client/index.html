@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="pwdManageApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS App : Password Management</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body class="container">
+  <div ng-include="'app/navbar/navbar.html'"></div>
+  <div ng-view></div>
+
+  <hr>
+  <footer>Password Management App</footer>
+
+
+  <!-- Libs -->
+
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="/bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
+  <script src="/bower_components/ng-clip/dest/ng-clip.min.js"></script>
+  <!-- Application Files -->
+  <script src="app/app.js"></script>
+  <script src="app/common/page-svc.js"></script>
+
+  <script src="app/search/search-ctrl.js"></script>
+  <script src="app/search/search-filter.js"></script>
+  <script src="app/add/add-ctrl.js"></script>
+  <script src="app/manage/manage-ctrl.js"></script>
+
+</body>
+</html>

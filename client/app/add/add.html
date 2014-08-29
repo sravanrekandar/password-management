@@ -1,0 +1,35 @@
+<h2>Add Page</h2>
+<form role="form" ng-submit="addPage(query)">
+	<div class="form-group">
+	    <label class="sr-only" for="page-name">Category</label>
+	    <input type="page-name" 
+	    	class="form-control" 
+	    	placeholder="Category"
+	    	required
+	    	ng-model="query.category">
+	 </div>
+	<div class="form-group">
+	    <label class="sr-only" for="page-name">Page or App Name</label>
+	    <input type="page-name" 
+	    	class="form-control" 
+	    	placeholder="Page or App Name"
+	    	required
+	    	ng-model="query.pagename">
+	 </div>
+	 <div class="form-group">
+	    <label class="sr-only" for="page-name">Username</label>
+	    <input type="page-name" 
+	    	class="form-control" 
+	    	placeholder="User Name"
+	    	ng-model="query.username">
+	 </div>
+	 <div class="form-group">
+	    <label class="sr-only" for="page-name">Password</label>
+	    <input type="password" 
+	    	class="form-control" 
+	    	placeholder="Password"
+	    	ng-model="query.password"
+	    	disabled>
+	 </div>
+  	<button type="submit" class="btn btn-default">Add</button>
+</form>

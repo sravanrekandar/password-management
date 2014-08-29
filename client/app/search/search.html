@@ -1,0 +1,56 @@
+<div class="row" ng-init="init()">
+  <div class="col-md-6">
+	<h2>Search Pages</h2>
+
+	<form class="form-inline" role="form">
+	  <div class="form-group">
+	    <label class="sr-only" for="page-name">Page Name contains</label>
+	    <input type="page-name" 
+	    	class="form-control" 
+	    	placeholder="Search"
+	    	ng-model="filterString">
+	  </div>
+	  <div class="form-group">
+	    <label class="sr-only" for="page-type">Password</label>
+	    
+	    <select name="page-type" 
+	    	class="form-control"
+	    	ng-model="categoryFilter"
+	    	ng-options="c.name for c in categories"
+	    	disabled>
+	    </select>
+	  </div>
+	</form>
+	<br/ >
+	<ul class="list-unstyled">
+		<li ng-repeat="page in pages|filter:filterString|filter:searchFilter">
+			<i class="glyphicon glyphicon-trash"
+				ng-click="deletePage(page)"></i>
+			<span ng-hide="page._edit">
+				{{page.page}}
+			</span>
+			<input type="text" 
+				ng-model="page.page"
+				 ng-show="page._edit" />
+			<i class="glyphicon glyphicon-pencil"
+				ng-click="editPage(page)"
+				ng-hide="page._edit"></i>
+			<i class="glyphicon glyphicon-ok"
+				ng-click="savePage(page)"
+				ng-show="page._edit">
+			</i>
+			<br />
+			[{{page.user}}]
+		</li>
+	</ul>
+  </div>
+  <div class="col-md-6">
+  	<h2>Details</h2>
+  	<div ng-show="!!selectedPage.page">
+	  	<p><strong>Page: </strong>{{selectedPage.page}}</p>
+	  	<p><strong>Category: </strong>{{selectedPage.category}}</p>
+	  	<p><strong>Added: </strong>{{selectedPage.updated}}</p>
+	  	<p><a href="#manage" class="btn btn-default">Manage Password</a></p>
+	</div>
+  </div>
+</div>

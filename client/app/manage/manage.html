@@ -1,0 +1,15 @@
+<h3>{{page.page}}</h3>
+<p><strong>username:</strong> {{page.user}}</p>
+<p><strong>password:
+	</strong>:
+<input 	readonly
+		ng-attr-type="{{showPwdText?'text':'password'}}"
+		ng-model="page.password"
+		ng-click="copyToClipboard(page.password)" 
+		/></p>
+<p><a clip-copy="getTextToCopy()" clip-click="doSomething()" /></p>
+<p>
+	<input type="checkbox"
+	ng-model="showPwdText"/>
+	<lable>Show Password Text</label>
+</p>
